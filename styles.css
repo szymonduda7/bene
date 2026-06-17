@@ -768,7 +768,7 @@ section { padding: 100px 0; }
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 80px;
-    align-items: start;
+    align-items: center;
 }
 
 .contact-details {
