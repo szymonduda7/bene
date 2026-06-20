@@ -895,12 +895,6 @@ section { padding: 100px 0; }
     transform: translateY(-1px);
 }
 
-/* ── PLACEHOLDER ── */
-.placeholder-x {
-    color: #ffffff !important;
-    opacity: 0.9;
-}
-
 /* ── MAP ── */
 .contact-map {
     margin-top: 48px;
@@ -1036,6 +1030,44 @@ footer {
     line-height: 1.6;
 }
 
+/* ── MARKI ── */
+#marki { background: var(--gray-50); }
+
+.brands-marquee {
+    margin-top: 56px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    animation: brands-scroll 30s linear infinite;
+}
+
+.brands-marquee:hover .brands-track { animation-play-state: paused; }
+
+@keyframes brands-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.brand-logo {
+    flex: none;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--gray-400);
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.brand-logo:hover { color: var(--gray-900); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
     .why-layout { grid-template-columns: 1fr; }
@@ -1072,6 +1104,9 @@ footer {
     .process-step:last-child { border-bottom: none !important; }
 
     .carousel-slide { height: 320px; }
+
+    .brands-track { gap: 48px; }
+    .brand-logo { font-size: 22px; }
 
     .reviews-grid { grid-template-columns: 1fr; }
 
