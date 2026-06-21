@@ -765,10 +765,7 @@ section { padding: 100px 0; }
 #kontakt { background: var(--white); }
 
 .contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 80px;
-    align-items: center;
+    display: block;
 }
 
 .contact-details {
